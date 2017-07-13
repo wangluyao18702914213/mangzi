@@ -1,0 +1,142 @@
+body{
+    background-color:#232828;
+}
+/*head*/
+.head{
+    height: 100px;
+
+}
+.head .con{
+    background-color: #394548;
+    height: 100%;
+    padding-left: 15px
+}
+.head .logo{
+    height: 70px;
+    width: 150px;
+    background-color: red;
+    margin-top: 15px    
+}
+.head .name{
+    color:#AC360B;
+    margin-left: 15px
+}
+
+
+.head .nav{
+    height: 100px;
+     width: 480px;
+     z-index: 99;
+}
+.head ul{
+    width: 480px;
+    height: 30px;
+    margin-top: 35px    
+}
+.head ul li{
+    height: 100%;
+    float:left;
+    border-radius: 20px; 
+    margin-left: 10px 
+}
+.head ul li:nth-of-type(1){
+     background-color: #AC360B;
+}
+.head ul li:hover{
+    background-color: #AC360B;
+}
+
+.head li a{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    font: bold 14px/30px "Microsoft Yahei";
+    padding: 0 15px;
+    color:#ddd;
+}
+
+
+
+
+/*banner*/
+    .view{
+            width: 960px;
+            height: 310px;
+            margin:0 auto;
+            position: relative;
+            background-color: #232828;
+        }
+    .view >ul{
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            /*transform: rotate3d(1,1,0,-30deg);*/
+            transform-style: preserve-3d;
+        }
+    .view ul > li{
+            width: 25%;
+            height: 100%;
+            float: left;
+            position: relative;
+            transform-style: preserve-3d;
+            /*添加过渡效果*/
+            transition: transform 0.5s;
+        }
+    .view ul > li > span{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+     .view   ul > li > span:nth-of-type(1) {
+            background: url("../images/banner/01.jpg");
+            /*往z轴正方向偏移*/
+            transform: translateZ(150px);
+        }
+     .view  ul > li > span:nth-of-type(2){
+            background: url("../images/banner/02.jpg");
+            transform: translateY(-150px) rotateX(90deg);
+        }
+     .view  ul > li > span:nth-of-type(3){
+            background: url("../images/banner/03.jpg");
+            transform: translateZ(-150px) rotateX(180deg);
+        }
+     .view   ul > li > span:nth-of-type(4){
+            background: url("../images/banner/04.jpg");
+            transform: translateY(150px) rotateX(-90deg);
+        }
+        /*设置每一个li元素的span所显示的图片的位置*/
+     .view  ul > li:nth-of-type(2) > span {
+            background-position: -100% 0;
+        }
+      .view ul > li:nth-of-type(3) > span {
+            background-position: -200% 0;
+        }
+     .view  ul > li:nth-of-type(4) > span {
+            background-position: -300% 0;
+        }
+     .view  ul > li:nth-of-type(5) > span {
+            background-position: -400% 0;
+        }
+
+    .view .pre,.next{
+            width: 40px;
+            height: 60px;
+            text-align: center;
+            line-height:60px;
+            position: absolute;
+            top: 50%;
+            text-decoration: none;
+            font-size: 40px;
+            transform: translate(0,-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: #fff;
+            border-radius: 3px;
+        }
+    .viwe .pre{
+            left: 0;
+        }
+    .view .next{
+            right: 0;
+        }
