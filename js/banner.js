@@ -56,10 +56,10 @@ function creatbanner(selector,num){
                 },2500);
             }
         });
-        // 定时器
-        setInterval(function(){
-            nextpic();
-        },5000)
+        // // 定时器
+        // setInterval(function(){
+        //     nextpic();
+        // },5000)
 }
 creatbanner('.view',10);
 

@@ -104,7 +104,10 @@ body{
     padding: 0 15px;
     color:#ddd;
 }
-
+.head li a:hover{
+    transition: transform .5s linear;
+    transform: scale(1.1);
+}
 
 
 
