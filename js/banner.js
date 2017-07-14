@@ -61,13 +61,9 @@ function creatbanner(selector,num){
         //     nextpic();
         // },5000)
 }
+
 creatbanner('.view',10);
-
-
-
-
-
-
+      
 
             //logo 动画切换
   

@@ -1,5 +1,5 @@
 body{
-    background-color:#232828;
+    background-color:#c0c0c0;
     user-select:none;
 }
 /*head*/
@@ -7,7 +7,7 @@ body{
     height: 100px;
 }
 .head .con{
-    /*background-color: #394548;*/
+
     height: 100%;
     padding-left: 15px;
     border:1px solid #666;
@@ -23,7 +23,7 @@ body{
     border-top-right-radius: 50%  50%;
     border-bottom-left-radius:50% 50%; 
     text-align: center;
-    text-shadow: 3px 3px 2px #ddd;
+    text-shadow: 3px 3px 2px #333;
     cursor: pointer;
     box-shadow: 0 0 2px #fff;
 
@@ -68,9 +68,9 @@ body{
 
 .head .name{
     color:#AC360B;
-    margin-left: 15px
+    margin-left: 15px;
+     text-shadow: 2px 2px 2px #333;
 }
-
 
 .head .nav{
     height: 100px;
@@ -86,6 +86,7 @@ body{
     height: 100%;
     float:left;
     border-radius: 20px; 
+    background-color: #777;
     margin-left: 10px;
     box-shadow: 0 0 4px #fff;
 }
@@ -108,6 +109,7 @@ body{
     transition: transform .5s linear;
     transform: scale(1.1);
 }
+
 
 
 
