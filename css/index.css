@@ -1,22 +1,71 @@
 body{
     background-color:#232828;
+    user-select:none;
 }
 /*head*/
 .head{
     height: 100px;
-
 }
 .head .con{
-    background-color: #394548;
+    /*background-color: #394548;*/
     height: 100%;
-    padding-left: 15px
+    padding-left: 15px;
+    border:1px solid #666;
+    box-sizing:border-box;
 }
 .head .logo{
+    position: relative;
     height: 70px;
     width: 150px;
-    background-color: red;
-    margin-top: 15px    
+    background-color: #AC360B;
+    margin-top: 15px ;
+    font:italic bold 26px/70px "Microsoft Yahei"; 
+    border-top-right-radius: 50%  50%;
+    border-bottom-left-radius:50% 50%; 
+    text-align: center;
+    text-shadow: 3px 3px 2px #ddd;
+    cursor: pointer;
+    box-shadow: 0 0 2px #fff;
+
 }
+
+.head .logo a,span{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color:#ddd;
+}
+.head .logo a{ 
+    top:-5px;
+    z-index: 999;
+    transition: transform 1s ease-in-out;
+}
+.head .logo span{
+    top:6px;
+    font-size: 16px; 
+    z-index: 1;
+    overflow: hidden;
+    width: 0;
+    text-indent: 1.5em;
+    text-align: left;
+    font-style: normal;
+    transition: all 1s  ease-in-out;
+}
+
+.head .logo .showlogo{
+    transform: scale(.6)  translateX(-65px) translateY(-30px);
+}
+
+.head .logo .showtext{
+     width: 100%;
+}
+
+
+
+
+
+
 .head .name{
     color:#AC360B;
     margin-left: 15px
@@ -25,19 +74,20 @@ body{
 
 .head .nav{
     height: 100px;
-     width: 480px;
+     width: 460px;
      z-index: 99;
 }
 .head ul{
-    width: 480px;
+    width: 100%;
     height: 30px;
     margin-top: 35px    
 }
-.head ul li{
+.head .nav li{
     height: 100%;
     float:left;
     border-radius: 20px; 
-    margin-left: 10px 
+    margin-left: 10px;
+    box-shadow: 0 0 4px #fff;
 }
 .head ul li:nth-of-type(1){
      background-color: #AC360B;
@@ -62,7 +112,7 @@ body{
     .view{
             width: 960px;
             height: 310px;
-            margin:0 auto;
+            margin:10px auto;
             position: relative;
             background-color: #232828;
         }
@@ -74,7 +124,7 @@ body{
             transform-style: preserve-3d;
         }
     .view ul > li{
-            width: 25%;
+            width: 10%;
             height: 100%;
             float: left;
             position: relative;
@@ -106,6 +156,7 @@ body{
             background: url("../images/banner/04.jpg");
             transform: translateY(150px) rotateX(-90deg);
         }
+
         /*设置每一个li元素的span所显示的图片的位置*/
      .view  ul > li:nth-of-type(2) > span {
             background-position: -100% 0;
@@ -118,6 +169,21 @@ body{
         }
      .view  ul > li:nth-of-type(5) > span {
             background-position: -400% 0;
+        }
+        .view  ul > li:nth-of-type(6) > span {
+            background-position: -500% 0;
+        }
+        .view  ul > li:nth-of-type(7) > span {
+            background-position: -600% 0;
+        }
+        .view  ul > li:nth-of-type(8) > span {
+            background-position: -700% 0;
+        }
+        .view  ul > li:nth-of-type(9) > span {
+            background-position: -800% 0;
+        }
+        .view  ul > li:nth-of-type(10) > span {
+            background-position: -900% 0;
         }
 
     .view .pre,.next{

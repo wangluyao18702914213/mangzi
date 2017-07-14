@@ -1,5 +1,20 @@
   $(function(){
-        /*定义图片索引*/
+
+
+function creatbanner(selector,num){
+    //生成dom
+    var i,str='';
+    for(i=0;i<num;i++){
+        str += `<li>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </li>`
+    }
+    $(selector).prepend($('<ul><ul>').html(str));
+    //轮播图
+       /*定义图片索引*/
         var index=0;
         /*添加节流阀  true说明本次单击会有响应处理*/
         var flag=true;
@@ -9,15 +24,12 @@
         });
 
 
-
     function nextpic(){
             if(flag==true){
                 /*设置节流阀*/
                 flag=false;
                 index--;
-                /*所谓下一张，就是将所有li元素围绕x旋转*/
-                $(".view li").each(function(key,value){ //0 1 2 3 4
-                    /*通过添加transform样式进行旋转*/
+                $(".view li").each(function(key,value){ 
                     $(this).css({
                         "transform":"rotateX("+(index*90)+"deg)",
                         "transition-delay":(key*0.2)+"s"
@@ -25,18 +37,15 @@
                 });
                 setTimeout(function(){
                     flag=true;
-                },1000);
+                },2500);
             }
         }
             // 上一张
         $(".pre").on("click",function(){
             if(flag==true){
-                /*设置节流阀*/
                 flag=false;
                 index++;
-                /*所谓下一张，就是将所有li元素围绕x旋转*/
-                $(".view li").each(function(key,value){ //0 1 2 3 4
-                    /*通过添加transform样式进行旋转*/
+                $(".view li").each(function(key,value){ 
                     $(this).css({
                         "transform":"rotateX("+(index*90)+"deg)",
                         "transition-delay":(key*0.2)+"s"
@@ -44,15 +53,30 @@
                 });
                 setTimeout(function(){
                     flag=true;
-                },1000);
+                },2500);
             }
         });
+        // 定时器
+        setInterval(function(){
+            nextpic();
+        },5000)
+}
+creatbanner('.view',10);
 
-        // setInterval(function(){
-        //     nextpic();
-        // },5000)
 
 
+
+
+
+
+            //logo 动画切换
+  
+        $('.logo').on('mouseover',function(){
+           $(this).find('a').addClass('showlogo').next().addClass('showtext')
+        }).on('mouseout',function(){
+            $(this).find('a').removeClass();
+            $(this).find('span').removeClass().addClass('hidtext')
+        })
 
 
     });
