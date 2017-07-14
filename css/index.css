@@ -1,5 +1,6 @@
 body{
-    background-color:#c0c0c0;
+    /*background-color:#c0c0c0;*/
+    background-color: #fff;
     user-select:none;
 }
 /*head*/
@@ -34,34 +35,55 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
-    color:#ddd;
+    /*color:#ddd;*/
+    color:#fff;
 }
 .head .logo a{ 
     top:-5px;
     z-index: 999;
-    transition: transform 1s ease-in-out;
-}
+    animation: logo 5s ease-in-out infinite alternate;
+               /*名字.持续时间.速度.次数.来回 */
+  }
 .head .logo span{
     top:6px;
     font-size: 16px; 
     z-index: 1;
     overflow: hidden;
-    width: 0;
+    /*width: 0;*/
     text-indent: 1.5em;
     text-align: left;
     font-style: normal;
-    transition: all 1s  ease-in-out;
+    animation: logotext 5s ease-in-out infinite alternate;
 }
-
-.head .logo .showlogo{
-    transform: scale(.6)  translateX(-65px) translateY(-30px);
+/*logo动画*/
+@keyframes logo{
+    0%{
+        transform: scale(1) translate(0);
+    }
+    50%{
+        transform: scale(1) translate(0);
+    }
+    75%{
+        transform: scale(.6)  translateX(-65px) translateY(-30px)
+    }
+    100%{
+       transform: scale(.6)  translateX(-65px) translateY(-30px) 
+    }
 }
-
-.head .logo .showtext{
-     width: 100%;
+@keyframes logotext{
+    0%{
+        width: 0;
+    }
+    60%{
+        width: 0;
+    }
+    75%{
+        width: 100%;
+    }
+    100%{
+        width: 100%;
+    }
 }
-
-
 
 
 
@@ -103,7 +125,7 @@ body{
     width: 100%;
     font: bold 14px/30px "Microsoft Yahei";
     padding: 0 15px;
-    color:#ddd;
+    color:#fff;
 }
 .head li a:hover{
     transition: transform .5s linear;

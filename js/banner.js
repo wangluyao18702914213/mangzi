@@ -65,14 +65,5 @@ function creatbanner(selector,num){
 creatbanner('.view',10);
       
 
-            //logo 动画切换
-  
-        $('.logo').on('mouseover',function(){
-           $(this).find('a').addClass('showlogo').next().addClass('showtext')
-        }).on('mouseout',function(){
-            $(this).find('a').removeClass();
-            $(this).find('span').removeClass().addClass('hidtext')
-        })
-
 
     });
